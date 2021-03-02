@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    width: 100%;
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "left right";
+    text-align: left;
+}
+nav .left {
+    margin-top: 15px;
+    grid-area: left;
+}
+nav .right {
+    margin-top: 15px;
+    grid-area: right;
+    text-align: right;
+}
+nav a{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    margin: 20px;
+}
+.sign-btn {
+    padding: 9px 16px 9px 16px;
+    background-color: #4285f4;
+    color: white;
+    font-weight:500;
+    border-radius: 7px;
+}
+.logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 17vh;
+}
+.search-bar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 600px;
+    height: 45px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    box-shadow: 0 0 10px  rgba(0, 0, 0, 0.2);
+}
+.search-btn {
+    border: 0px;
+    outline: none;
+    margin-top: 5px;
+    height: 70%;
+    width: 70%;
+    font-size: 20px;
+}
+.search-bar .v-btn{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    float: right;
+    margin: 10px;
+}
+.search-bar .s-btn {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    float: left;
+    margin: 10px;
+}
+.under {
+    margin-top: 40px;
+    text-align: center;
+}
+.btn {
+    margin-right: 18px;
+    background-color:rgba(128, 128, 128, 0.1);
+    padding: 10px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 100;
+    font-size: 13px;
+    border-radius: 5px;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(128, 128, 128, 0.1);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "lefto righto";
+}
+.footer-left {
+    grid-area: lefto;
+    padding-left: 35px;
+}
+.footer-right {
+    grid-area: righto;
+    text-align: right;
+    padding-right: 35px;
+}
+.cook a {
+    display: inline-block;
+    padding: 14px 8px;
+    color:  rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    font-size: 13px;
+}
+@media (max-width: 750px){
+    nav {
+        grid-template-columns: 1fr;
+        grid-template-areas: "only";
+        text-align: center;
+    }
+    nav .right {
+        text-align: center;
+        grid-area: only;
+    }
+    nav .left {
+        display: none;
+    }
+    .search-bar {
+        width: 85%;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: "onlyone"
+                             "onlytwo";
+    }
+    footer .footer-left {
+        grid-area: onlytwo;
+        text-align: center;
+    }
+    footer .footer-right {
+        grid-area: onlyone;
+        text-align: center;
+    }
+}
